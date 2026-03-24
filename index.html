@@ -7,7 +7,7 @@
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="/assets/styles.css"/>
 </head>
 <body>
@@ -18,7 +18,7 @@
     <a class="nav-brand" href="/">
       <span class="nav-name">Branden Beardsley</span>
       <span class="nav-div"></span>
-      <span class="nav-sub">Payments PM</span>
+      <span class="nav-sub">Payments · Stripe Application</span>
     </a>
     <ul class="nav-links">
       <li><a class="nav-link active" href="/">Home</a></li>
@@ -30,511 +30,253 @@
         </div>
       </li>
       <li><a class="nav-link" href="/cellix">Cellix.AI</a></li>
-      <li><a class="nav-link" href="/pm-philosophy">PM Philosophy</a></li>
     </ul>
     <div class="nav-right">
-      <span class="nav-pill">PM Application · Stripe</span>
+      <span class="nav-pill">Application · Stripe</span>
     </div>
     <button class="nav-hamburger" aria-label="Menu">&#9776;</button>
   </div>
 </nav>
 
-<!-- HERO — opens with Stripe's problem, not the candidate -->
-<section class="hero">
-  <div class="hero-in">
-    <div class="hero-left">
-      <div class="role-tag au d1">
+<!-- HERO — personal, authentic, photo + intro -->
+<section class="hero-new">
+  <div class="hero-new-in">
+    <!-- Photo appears FIRST on mobile via CSS order -->
+    <div class="hero-new-photo au d1">
+      <img src="/assets/headshot.jpg" alt="Branden Beardsley" class="headshot"/>
+      <div class="hero-new-details">
+        <div class="detail-name">Branden Beardsley</div>
+        <div class="detail-role">Payments Performance Manager, Adyen</div>
+        <div class="detail-loc">Chicago, IL</div>
+        <div class="detail-edu">MS Data Science · 4.0 GPA</div>
+      </div>
+    </div>
+
+    <div class="hero-new-text au d2">
+      <div class="role-tag">
         <span class="role-dot"></span>
         Product Manager · Payments Intelligence · Stripe
       </div>
 
-      <h1 class="hero-h1 au d2">
-        Maximizing revenue on<br>
-        <span class="hl">every transaction</span><br>
-        takes deep domain fluency.
+      <h1 class="hero-new-h1">
+        Hi, I'm Branden.
       </h1>
 
-      <p class="hero-sub au d3">
-        Stripe's Payments Intelligence team optimizes billions of dollars in annual payment volume — reducing fraud, lifting authorization rates, and lowering payment costs for merchants. That work demands a PM who can develop long-term vision, set the execution roadmap, deeply understand developer needs — and has shipped these systems, not just studied them.
-      </p>
-      <p class="hero-attribution au d3">
-        Submitted by <strong>Branden Beardsley</strong> — currently leading authorization optimization at <strong>Adyen</strong>, the same work as Authorization Boost. Previously built a fraud engine from zero at <strong>Paze</strong>, owned enterprise compliance tooling at <strong>PayPal</strong>, and scaled fraud operations at <strong>Chime</strong>. Now building <a href="/cellix">Cellix.ai</a>, a live AI payments intelligence platform serving 27+ processors. This isn't a career pivot — it's a homecoming.
+      <p class="hero-new-intro">
+        Almost 8 years in payments — at <strong>Chime</strong>, <strong>PayPal</strong>, <strong>Paze</strong>, and now <strong>Adyen</strong>. I've never held the title of Product Manager, but I've spent my career building roadmaps, shipping systems from scratch, and helping merchants integrate and adopt product features.
       </p>
 
-      <div class="hero-btns au d4">
-        <a class="btn-p" href="#evidence">See the evidence ↓</a>
-        <a class="btn-s" href="/cellix">Explore Cellix.ai →</a>
-      </div>
-    </div>
+      <p class="hero-new-passion">
+        I spend my weekends building <a href="/cellix">Cellix.ai</a>, an AI-powered dispute automation platform — not to launch a startup, but because I can't stop thinking about these problems. I'd love the opportunity to start my PM career at Stripe.
+      </p>
 
-    <!-- Card frames Stripe's domain problems, not candidate achievements -->
-    <div class="hero-card au d5">
-      <div class="card-chrome">
-        <span class="chrdot c-r"></span><span class="chrdot c-y"></span><span class="chrdot c-g"></span>
-        <span class="card-ttl">Payments Intelligence · Key metrics</span>
-      </div>
-      <div class="card-body">
-        <div class="card-sh">What this role optimizes</div>
-        <div class="mrow"><span class="ml">Auth optimization → merchant revenue</span><span class="mr">$15M+ <span class="mtag tg">Adyen</span></span></div>
-        <div class="mrow"><span class="ml">Enterprise merchants advised on auth lift</span><span class="mr">50+ <span class="mtag tv">Adyen Uplift</span></span></div>
-        <div class="mrow"><span class="ml">Authorization rate improvement</span><span class="mr">+3–5pp <span class="mtag tg">direct</span></span></div>
-        <div class="mrow"><span class="ml">Fraud rules shipped from first principles</span><span class="mr">90+ <span class="mtag tv">Paze 0→1</span></span></div>
-        <div class="mrow"><span class="ml">Payment cost reduction (fines prevented)</span><span class="mr">$2M+ <span class="mtag tg">PayPal</span></span></div>
-        <div class="mrow"><span class="ml">Fraud ops scaled from pilot to production</span><span class="mr">150+ <span class="mtag tv">Chime</span></span></div>
-        <div class="sparkwrap">
-          <div class="spark-lbl">ARR trajectory · Adyen merchant portfolio</div>
-          <div class="spark">
-            <div class="sb" style="height:30%"></div><div class="sb" style="height:36%"></div>
-            <div class="sb" style="height:34%"></div><div class="sb" style="height:48%"></div>
-            <div class="sb" style="height:44%"></div><div class="sb" style="height:56%"></div>
-            <div class="sb" style="height:62%"></div><div class="sb" style="height:70%"></div>
-            <div class="sb hi" style="height:79%"></div><div class="sb hi" style="height:86%"></div>
-            <div class="sb hi" style="height:91%"></div><div class="sb hi" style="height:95%"></div>
-          </div>
-        </div>
+      <div class="hero-new-btns">
+        <a class="btn-p" href="#journey">See my journey ↓</a>
+        <a class="btn-s" href="/cellix">My weekend project →</a>
+        <a class="btn-s" href="/resume">Resume</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STAT STRIP -->
-<div class="stats">
-  <div class="stats-in au d6">
-    <div class="sc">
-      <div class="sc-n">$15<em>M+</em></div>
-      <div class="sc-l">ARR generated through auth optimization at Adyen</div>
-    </div>
-    <div class="sc">
-      <div class="sc-n">50<em>+</em></div>
-      <div class="sc-l">Enterprise merchants advised on Adyen Uplift globally</div>
-    </div>
-    <div class="sc">
-      <div class="sc-n">90<em>+</em></div>
-      <div class="sc-l">Fraud rules shipped from zero at Paze</div>
-    </div>
-    <div class="sc">
-      <div class="sc-n">4</div>
-      <div class="sc-l">Companies — Chime, PayPal, Paze, Adyen</div>
-    </div>
-  </div>
-</div>
-
-<!-- REQUIREMENTS — framed as STRIPE NEEDS, answered with evidence -->
-<section class="sec sec-alt" id="evidence">
+<!-- WHAT I BRING — honest framing -->
+<section class="sec" id="journey">
   <div class="sec-in">
-    <div class="sec-ey">Role requirements</div>
-    <h2 class="sec-h2">What the role demands.<br>Where the evidence is.</h2>
-    <p class="sec-lead">Each of Stripe's stated requirements for the PM, Payments Intelligence role — with the specific work that answers it.</p>
+    <div class="sec-ey">What I bring</div>
+    <h2 class="sec-h2">Not a PM title.<br>The domain expertise that earns one.</h2>
+    <p class="sec-lead">I haven't been a Product Manager. But here's what almost 8 years in payments has taught me — and why I think it translates.</p>
 
-    <div class="bento">
+    <div class="bring-grid">
 
-      <div class="bc" style="--ct:#635BFF">
-        <div class="bc-problem">Requirement · 8+ years PM experience</div>
-        <div class="bc-h">7+ years of payments product ownership across four companies — and 100% domain overlap with every responsibility in this posting</div>
-        <div class="bc-ev">At <strong>Adyen</strong> (2025–present), owns product strategy for enterprise auth optimization — $15M+ ARR. At <strong>Paze</strong> (2024–2025), owned the full fraud product 0→1, from vendor selection and engineering sprint planning through board reporting. At <strong>PayPal</strong> (2021–2024), owned merchant compliance tooling for 500+ accounts. At <strong>Chime</strong> (2019–2021), launched a 150-person fraud ops site and built dispute forecasting models. Every role was product ownership in practice — defining roadmaps, shipping to production, and owning revenue outcomes — regardless of what the org chart called it.</div>
+      <div class="bring-card">
+        <div class="bring-icon">&#127919;</div>
+        <h3>Deep domain expertise</h3>
+        <p>Authorization optimization, fraud prevention, dispute management, card network compliance (Visa CE3.0, Mastercard), merchant risk tooling — this is the problem space I've lived in across four companies and every angle of the payments stack.</p>
       </div>
 
-      <div class="bc" style="--ct:#0BBF6E">
-        <div class="bc-problem">Requirement · Strong business acumen</div>
-        <div class="bc-h">Revenue impact through payments stack optimization</div>
-        <div class="bc-ev">Generated <strong>$15M+ ARR at Adyen</strong> and <strong>$500K+ ARR at PayPal</strong> by diagnosing merchant stack inefficiencies and building clear cost/benefit cases. Advised enterprise risk teams on authorization performance with measurable outcome tracking.</div>
+      <div class="bring-card">
+        <div class="bring-icon">&#128295;</div>
+        <h3>I build things</h3>
+        <p>I defined product requirements, designed roadmaps, wrote technical specs, ran A/B tests, and shipped systems from zero. At Paze, I owned the entire fraud engine from vendor selection through board reporting. The work was PM work — the title wasn't.</p>
       </div>
 
-      <div class="bc" style="--ct:#00D4FF">
-        <div class="bc-problem">Requirement · Customer &amp; partner facing</div>
-        <div class="bc-h">C-level enterprise merchant conversations at scale — and deep understanding of developer needs</div>
-        <div class="bc-ev">Currently advising <strong>50+ enterprise merchants on Adyen Uplift</strong> — personalizing global checkout strategies, running competitive A/B tests, and converting C-level risk leaders with data-backed switching narratives. At Paze, delivered product demos that grew the merchant portfolio from zero. At Cellix, built developer-facing APIs and processor integrations — understanding firsthand what developers need from payment intelligence products.</div>
+      <div class="bring-card">
+        <div class="bring-icon">&#129504;</div>
+        <h3>Genuine curiosity</h3>
+        <p>I spend my weekends coding <a href="/cellix">Cellix.ai</a> — an AI dispute automation platform across 27+ processor integrations. Not because I have to. Because I'm genuinely fascinated by how AI will reshape payment intelligence and I wanted to build something that solves a real problem.</p>
       </div>
 
-      <div class="bc" style="--ct:#E8475F">
-        <div class="bc-problem">Requirement · Operational savvy — design and drive cross-functional teams</div>
-        <div class="bc-h">Launched and scaled a 150-person fraud operations site; designed cross-functional processes across Engineering, Sales, and Operations</div>
-        <div class="bc-ev">At <strong>Chime</strong>, took a fraud investigation pilot from concept to a 150+ investigator operation — defined case routing logic, SLA frameworks, and accuracy thresholds that sustained 95%+ case accuracy at scale. At <strong>Adyen</strong>, built the commercial enablement program that trained Account Management teams to independently configure and run competitive A/B tests — removing a specialist bottleneck and operationalizing a function that previously required PM involvement on every deal. At <strong>Paze</strong>, drove cross-functional coordination across Engineering, Data Science, vendor teams, and the board on a weekly cadence.</div>
+      <div class="bring-card">
+        <div class="bring-icon">&#128200;</div>
+        <h3>Business impact at scale</h3>
+        <p>$15M+ ARR through auth optimization at Adyen. $2M+ in card network fines prevented at PayPal. 150-person fraud ops site launched at Chime. I understand how payments work at the revenue level, not just the technical level.</p>
       </div>
 
-      <div class="bc" style="--ct:#635BFF">
-        <div class="bc-problem">Requirement · Analytical horsepower &amp; first-principles thinking</div>
-        <div class="bc-h">MS in Data Science, applied to fraud ML, forecasting, and first-principles system design</div>
-        <div class="bc-ev"><strong>Master's in Data Science, 4.0 GPA</strong>, focused on Applied ML and Agentic Workflow Design. Approaches every problem from first principles — at <strong>Paze</strong>, rejected the vendor's recommended fraud rules entirely and built signal architecture from raw data; the resulting engine outperformed the vendor's baseline within 8 weeks. At <strong>Adyen</strong>, designed controlled A/B tests with the data science team against competing processors — defining statistical significance thresholds and translating basis-point improvements into merchant revenue. At <strong>Chime</strong>, built dispute volume forecasting models that predicted 30-day workload and cleared 30% of case backlog in 6 months.</div>
+      <div class="bring-card">
+        <div class="bring-icon">&#129309;</div>
+        <h3>Merchant-facing intuition</h3>
+        <p>I've advised 50+ enterprise merchants on checkout optimization at Adyen, built compliance dashboards for 500+ merchants at PayPal, and delivered product demos that grew Paze's merchant portfolio from zero. I know how to talk to merchants and understand what they need.</p>
       </div>
 
-      <div class="bc" style="--ct:#0BBF6E">
-        <div class="bc-problem">Requirement · Crisp communicator</div>
-        <div class="bc-h">Precise, effective communication — from board rooms to developer docs to merchant C-suites</div>
-        <div class="bc-ev">Presented weekly strategy and metrics <strong>directly to the board at Paze</strong>. Built compliance dashboards at PayPal monitoring 500+ merchants, preventing $2M+ in annual card network fines and improving dispute win rates 20–40%. At <strong>Adyen</strong>, created data-driven switching narratives that translated basis-point auth improvements into dollar-denominated merchant revenue — precise enough for CFOs, actionable enough for technical teams.</div>
-      </div>
-
-      <div class="bc" style="--ct:#E8475F">
-        <div class="bc-problem">Requirement · Results-oriented — "whatever it takes"</div>
-        <div class="bc-h">Built a production AI payments intelligence platform solo — while working full-time — because the problem demanded a product that didn't exist</div>
-        <div class="bc-ev">Built <strong><a href="/cellix" style="color:inherit">Cellix.ai</a></strong> from scratch as a solo founder while leading auth optimization at Adyen full-time — dispute automation, fraud prevention, and processor optimization across 27+ integrations, live in production. At <strong>Paze</strong>, shipped a complete fraud engine from zero to production in under 12 months under board-level pressure. Whatever it takes is the default operating mode.</div>
-      </div>
-
-      <div class="bc" style="--ct:#00D4FF">
-        <div class="bc-problem">Requirement · Build and coach teams</div>
-        <div class="bc-h">Built enablement programs, coached cross-functional teams, and scaled organizations from zero</div>
-        <div class="bc-ev">At <strong>Adyen</strong>, built the commercial enablement program that coached Account Management teams to independently configure and run competitive A/B tests — removing a specialist bottleneck and operationalizing a function that previously required PM involvement on every deal. At <strong>Chime</strong>, hired, trained, and scaled a 150+ investigator fraud operations site — defining case routing logic, SLA frameworks, and accuracy thresholds. At <strong>Paze</strong>, led cross-functional sprint planning across engineering, data science, and vendor teams.</div>
+      <div class="bring-card">
+        <div class="bring-icon">&#127891;</div>
+        <h3>Analytical foundation</h3>
+        <p>Master's in Data Science (4.0 GPA) focused on Applied ML. I designed controlled A/B tests against competing processors at Adyen, built dispute forecasting models at Chime, and approached every problem from first principles.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- CASE STUDIES — each opens with the Stripe product challenge -->
-<section class="sec" id="cases">
+<!-- CAREER — narrative timeline -->
+<section class="sec sec-alt" id="career">
   <div class="sec-in">
-    <div class="sec-ey">Case studies</div>
-    <h2 class="sec-h2">Four Stripe problems.<br>Already solved elsewhere.</h2>
-    <p class="sec-lead">Each case is framed around the challenge Stripe's Payments Intelligence team faces — with the work that demonstrates it's been done before.</p>
+    <div class="sec-ey">Career</div>
+    <h2 class="sec-h2">Almost 8 years. Four companies.<br>One domain I can't get enough of.</h2>
+    <p class="sec-lead">Each role brought me deeper into payments — from operations to strategy to optimization. Here's the thread that connects them.</p>
 
-    <!-- CASE 1: ADYEN -->
-    <div class="case">
-      <div class="case-hd">
-        <div>
-          <div class="co-row">
-            <span class="co-badge" style="color:var(--v);border-color:rgba(99,91,255,.22)">Adyen</span>
-            <span class="co-date">Feb 2025 – Present · Payments Performance Manager</span>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-marker" style="--mc:#00D4FF"></div>
+        <div class="tl-content">
+          <div class="tl-meta">
+            <span class="tl-company">Chime</span>
+            <span class="tl-dates">2019 – 2021</span>
+            <span class="tl-title">Fraud Operations & Strategy</span>
           </div>
-          <div class="case-stripe-product">↔ Stripe Authorization Boost · Payments Intelligence</div>
-          <h2 class="case-h">Authorization Boost needs a PM who can translate ML signal improvements into merchant revenue — and run the experiments that prove it.</h2>
-        </div>
-        <div class="case-num">01</div>
-      </div>
-      <p class="case-ctx">Enterprise merchants with multi-processor stacks demand proof before switching. Adyen's Uplift product — like Stripe's Authorization Boost — only lands if the PM can design rigorous A/B tests against competing processors and turn the results into commercial decisions. In the first 8 weeks at Adyen, expanded the Protect portfolio to 30+ household-name brands and drove $15M+ in ARR through enterprise upsell. This is the current day-to-day.</p>
-      <div class="ctbl">
-        <div class="ccol">
-          <div class="cch">The challenge at Adyen</div>
-          <ul>
-            <li>No structured methodology to compare processors</li>
-            <li>Account teams couldn't run tests without specialist support</li>
-            <li>Competitors made unverifiable authorization claims</li>
-            <li>Product adoption stalled without third-party proof points</li>
-          </ul>
-        </div>
-        <div class="ccol">
-          <div class="cch">How it was solved</div>
-          <ul>
-            <li>Designed controlled A/B test methodology with data science team — defined statistical significance thresholds, traffic splitting, and measurement windows</li>
-            <li>Built commercial enablement program so AM teams could configure and run processor comparison tests without specialist support</li>
-            <li>Created data-driven switching narratives — translating basis-point improvements into dollar-denominated merchant revenue impact</li>
-            <li>Advised 50+ enterprise merchants on global checkout optimization, including multi-acquirer routing and issuer-level auth strategy</li>
-          </ul>
-        </div>
-        <div class="ccol">
-          <div class="cch">Why it translates to Stripe</div>
-          <ul>
-            <li>Authorization Boost faces the exact same merchant proof-point challenge</li>
-            <li>Multi-acquirer routing and issuer-level auth strategy maps to Stripe's intelligent routing and network token optimization</li>
-            <li>Enablement model maps directly to Stripe's Sales + PM dynamic</li>
-            <li>Building payment infrastructure that serves real-time predictions at scale — the same architectural challenge</li>
-          </ul>
-        </div>
-      </div>
-      <div class="outcomes">
-        <div class="oc"><span class="oc-n" style="color:var(--v)">$15M+</span><span class="oc-l">ARR generated via Protect upsell</span></div>
-        <div class="oc"><span class="oc-n" style="color:var(--head)">50+</span><span class="oc-l">Enterprise merchants advised on Uplift</span></div>
-        <div class="oc"><span class="oc-n" style="color:var(--head)">30+</span><span class="oc-l">Household-name brands on Protect</span></div>
-        <div class="oc"><span class="oc-n" style="color:#0a9957">Current</span><span class="oc-l">Role — Feb 2025 to present</span></div>
-      </div>
-      <div class="callout">
-        <div class="callout-ic">&#128202;</div>
-        <div>
-          <div class="callout-lbl">The Stripe connection</div>
-          <div class="callout-txt">Authorization Boost's PM role requires someone who can design experiments, interpret ML signal improvements, and turn those results into merchant revenue conversations — at scale, with enterprise merchants, today. That's the current role at Adyen. The methodology, the enablement infrastructure, and the commercial outcomes are directly transferable.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CASE 2: PAZE -->
-    <div class="case">
-      <div class="case-hd">
-        <div>
-          <div class="co-row">
-            <span class="co-badge" style="color:#0a9957;border-color:rgba(11,191,110,.28)">Paze · Early Warning</span>
-            <span class="co-date">Feb 2024 – Feb 2025 · Sr. Fraud Risk Strategist</span>
+          <h3>Where I learned how fraud systems actually work</h3>
+          <p>Started at the operational layer — which turns out to be where everything begins. Launched a fraud investigation site from a small pilot to 150+ investigators. Built dispute forecasting models that predicted volume 30 days out. Defined case routing logic and accuracy frameworks that sustained 95%+ accuracy at scale.</p>
+          <div class="tl-stats">
+            <span class="tl-stat">150+ investigators scaled</span>
+            <span class="tl-stat">95%+ case accuracy</span>
+            <span class="tl-stat">30% backlog cleared</span>
           </div>
-          <div class="case-stripe-product">↔ Stripe Radar · Fraud Prevention</div>
-          <h2 class="case-h">Radar needs a PM who can build a fraud ML stack from scratch and ship it — not just manage one that exists.</h2>
-        </div>
-        <div class="case-num">02</div>
-      </div>
-      <p class="case-ctx">Paze launched competing with PayPal and Apple Pay with zero fraud risk infrastructure — no rules, no vendor stack, no ML signals. The challenge was identical to what Stripe faces when standing up a new risk product: build it right, ship it fast, and prove it works in production.</p>
-      <div class="ctbl">
-        <div class="ccol">
-          <div class="cch">The challenge at Paze</div>
-          <ul>
-            <li>Zero fraud infrastructure at launch</li>
-            <li>No vendor relationships or signal stack</li>
-            <li>Board pressure to show risk metrics weekly</li>
-            <li>Auth rates uncompetitive vs incumbents</li>
-          </ul>
-        </div>
-        <div class="ccol">
-          <div class="cch">How it was solved</div>
-          <ul>
-            <li>Evaluated &amp; onboarded device intelligence, identity, and fraud signal vendors — wrote the technical spec, defined API integration requirements, and worked directly with developers to ship each integration</li>
-            <li>Defined and authored 90+ signal-layered rules, partnering with data engineers on feature extraction and model signal architecture — owning the product requirements while engineering owned the code</li>
-            <li>Ran systematic tuning cycles — prioritizing precision/recall trade-offs against board-mandated auth rate targets</li>
-            <li>Owned the full product roadmap: vendor selection, engineering sprint planning, rule deployment cadence, and weekly board reporting</li>
-          </ul>
-        </div>
-        <div class="ccol">
-          <div class="cch">Why it translates to Stripe</div>
-          <ul>
-            <li>Mirrors Radar's rule authoring and ML signal architecture</li>
-            <li>Same build-test-tune loop as Authorization Boost</li>
-            <li>Identical stakeholder trade-off: risk tolerance vs. auth rate</li>
-            <li>Demonstrates 0→1 payment product ownership</li>
-          </ul>
         </div>
       </div>
-      <div class="outcomes">
-        <div class="oc"><span class="oc-n" style="color:#0a9957">~15%</span><span class="oc-l">Reduction in false-positive declines</span></div>
-        <div class="oc"><span class="oc-n" style="color:var(--v)">3–5pp</span><span class="oc-l">Auth rate lift post-engine launch</span></div>
-        <div class="oc"><span class="oc-n" style="color:var(--head)">90+</span><span class="oc-l">Fraud rules authored and tuned</span></div>
-        <div class="oc"><span class="oc-n" style="color:var(--v)">0→1</span><span class="oc-l">Full stack built from zero</span></div>
-      </div>
-      <div class="callout">
-        <div class="callout-ic">&#9889;</div>
-        <div>
-          <div class="callout-lbl">The Stripe connection</div>
-          <div class="callout-txt">Stripe Radar's PM needs to understand fraud signal architecture, rule authoring trade-offs, and false positive tuning at a level that only comes from having shipped these systems. This work is the direct equivalent — built from scratch, tuned in production, and presented to the board.</div>
-        </div>
-      </div>
-    </div>
 
-    <!-- CASE 3: PAYPAL -->
-    <div class="case">
-      <div class="case-hd">
-        <div>
-          <div class="co-row">
-            <span class="co-badge" style="color:var(--red);border-color:rgba(232,71,95,.22)">PayPal</span>
-            <span class="co-date">Oct 2021 – Feb 2024 · Enterprise Risk Strategist</span>
+      <div class="tl-item">
+        <div class="tl-marker" style="--mc:#E8475F"></div>
+        <div class="tl-content">
+          <div class="tl-meta">
+            <span class="tl-company">PayPal</span>
+            <span class="tl-dates">Oct 2021 – Feb 2024</span>
+            <span class="tl-title">Enterprise Risk Strategist</span>
           </div>
-          <div class="case-stripe-product">↔ Stripe Radar · Dispute Management</div>
-          <h2 class="case-h">Radar's dispute and compliance features need a PM who understands card network rules at the merchant operations level.</h2>
-        </div>
-        <div class="case-num">03</div>
-      </div>
-      <p class="case-ctx">Card network compliance programs expose merchants to millions in annual fines — a direct payment cost that Stripe's Payments Intelligence team works to minimize. Radar's dispute management and Visa CE3.0 features sit in exactly this problem space — and managing 500+ enterprise merchants through it requires operational depth and developer-facing product instincts that are rare to find together.</p>
-      <div class="ctbl">
-        <div class="ccol">
-          <div class="cch">The challenge at PayPal</div>
-          <ul>
-            <li>500+ merchants in Visa/MC compliance risk programs</li>
-            <li>No centralized alerting — issues surfaced reactively</li>
-            <li>Dispute win rates below industry benchmarks</li>
-            <li>Risk tooling adoption low among enterprise accounts</li>
-          </ul>
-        </div>
-        <div class="ccol">
-          <div class="cch">How it was solved</div>
-          <ul>
-            <li>Defined product requirements for a compliance monitoring system — threshold alerting, merchant segmentation, and escalation workflows for 500+ accounts</li>
-            <li>Prioritized which card network programs to instrument first based on fine exposure and merchant revenue at risk</li>
-            <li>Designed the merchant-facing tooling bundle — packaging dispute analytics, fraud recommendations, and compliance dashboards into a product that drove $500K+ new ARR</li>
-            <li>Owned the roadmap for risk tooling adoption — identified friction points, built onboarding flows, and tracked activation metrics to increase enterprise adoption</li>
-          </ul>
-        </div>
-        <div class="ccol">
-          <div class="cch">Why it translates to Stripe</div>
-          <ul>
-            <li>Radar's dispute management serves the same compliance challenge</li>
-            <li>Identical workflow: data analysis → product recommendation → merchant ROI</li>
-            <li>Card network rule depth (Visa CE3.0, TC40s) is directly applicable</li>
-            <li>Cellix.ai was built on this experience — now serving 27+ processors</li>
-          </ul>
-        </div>
-      </div>
-      <div class="outcomes">
-        <div class="oc"><span class="oc-n" style="color:var(--red)">$2M+</span><span class="oc-l">Annual card network fines prevented</span></div>
-        <div class="oc"><span class="oc-n" style="color:#0a9957">20–40%</span><span class="oc-l">Improvement in dispute win rates</span></div>
-        <div class="oc"><span class="oc-n" style="color:var(--v)">$500K+</span><span class="oc-l">New ARR from risk tooling upsell</span></div>
-        <div class="oc"><span class="oc-n" style="color:var(--head)">500+</span><span class="oc-l">Enterprise merchants managed</span></div>
-      </div>
-      <div class="callout">
-        <div class="callout-ic">&#128737;</div>
-        <div>
-          <div class="callout-lbl">The Stripe connection</div>
-          <div class="callout-txt">Radar's dispute management and Visa CE3.0 features require a PM who has operated in this exact problem space — not just read the spec. Managing 500 merchants through compliance programs, building the tooling that prevented $2M in fines, and then encoding that knowledge into Cellix.ai is the credential.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CASE 4: CHIME -->
-    <div class="case">
-      <div class="case-hd">
-        <div>
-          <div class="co-row">
-            <span class="co-badge" style="color:#00D4FF;border-color:rgba(0,212,255,.22)">Chime</span>
-            <span class="co-date">2019 – 2021 · Fraud Operations &amp; Strategy</span>
+          <h3>Where I learned merchant-facing product at enterprise scale</h3>
+          <p>Owned compliance tooling for 500+ enterprise merchants across Visa and Mastercard programs. Designed the merchant-facing product bundle — dispute analytics, fraud recommendations, and compliance dashboards — that drove $500K+ in new ARR. Prevented $2M+ in annual card network fines. This is where I learned Visa CE3.0, TC40s, and card network rules at a depth that most people never touch.</p>
+          <div class="tl-stats">
+            <span class="tl-stat">$2M+ fines prevented</span>
+            <span class="tl-stat">$500K+ new ARR</span>
+            <span class="tl-stat">500+ merchants</span>
           </div>
-          <div class="case-stripe-product">↔ Stripe Radar · Operational Scale</div>
-          <h2 class="case-h">Scaling fraud operations from pilot to production requires a PM who has built the systems, not just the models.</h2>
-        </div>
-        <div class="case-num">04</div>
-      </div>
-      <p class="case-ctx">ML models don't catch fraud alone — they need operational infrastructure: investigators who action alerts, case routing logic that scales, accuracy measurement that catches drift, and forecasting that keeps headcount ahead of volume. This is the operational backbone that makes Radar effective at scale.</p>
-      <div class="ctbl">
-        <div class="ccol">
-          <div class="cch">The challenge at Chime</div>
-          <ul>
-            <li>Fraud investigation was ad-hoc — no structured case management or routing</li>
-            <li>No forecasting to predict dispute volume or staffing needs</li>
-            <li>Case accuracy unmeasured — no SLAs, no feedback loops</li>
-            <li>Investigation backlog growing faster than headcount</li>
-          </ul>
-        </div>
-        <div class="ccol">
-          <div class="cch">How it was solved</div>
-          <ul>
-            <li>Designed case routing logic and SLA frameworks — defined what "good" looked like before scaling</li>
-            <li>Launched a 150+ investigator fraud ops site from pilot, hiring and training in partnership with the operations team</li>
-            <li>Built dispute forecasting models that predicted volume 30 days out, clearing 30% of case backlog in 6 months</li>
-            <li>Defined accuracy measurement frameworks that sustained 95%+ case accuracy at scale</li>
-          </ul>
-        </div>
-        <div class="ccol">
-          <div class="cch">Why it translates to Stripe</div>
-          <ul>
-            <li>Radar's effectiveness depends on the operational layer beneath the ML — the same layer built at Chime</li>
-            <li>Forecasting dispute volume is directly applicable to Radar capacity planning</li>
-            <li>Scaling from pilot to 150+ people is the kind of operational judgment this role requires</li>
-            <li>Accuracy frameworks translate directly to Radar's precision/recall monitoring</li>
-          </ul>
         </div>
       </div>
-      <div class="outcomes">
-        <div class="oc"><span class="oc-n" style="color:#00D4FF">150+</span><span class="oc-l">Investigators launched from pilot</span></div>
-        <div class="oc"><span class="oc-n" style="color:#0a9957">95%+</span><span class="oc-l">Case accuracy sustained at scale</span></div>
-        <div class="oc"><span class="oc-n" style="color:var(--v)">30%</span><span class="oc-l">Backlog cleared via forecasting models</span></div>
-        <div class="oc"><span class="oc-n" style="color:var(--head)">2 yrs</span><span class="oc-l">Pilot to full-scale operation</span></div>
-      </div>
-      <div class="callout">
-        <div class="callout-ic">&#9881;</div>
-        <div>
-          <div class="callout-lbl">The Stripe connection</div>
-          <div class="callout-txt">Stripe Radar isn't just an ML product — it's an operational system that serves real-time predictions as payment infrastructure. The PM needs to understand how fraud investigation scales, how case accuracy is maintained, and how forecasting keeps the system ahead of volume. That operational foundation — the layer beneath the ML that developers and merchants actually depend on — was built at Chime before any of the ML-focused work at Paze, PayPal, or Adyen.</div>
-        </div>
-      </div>
-    </div>
 
-  </div>
-</section>
-
-<!-- CELLIX — teaser pointing to full page -->
-<section class="sec sec-alt">
-  <div class="sec-in">
-    <div class="sec-ey">Proof of concept</div>
-    <h2 class="sec-h2">What happens when a Payments Intelligence PM<br>encodes Stripe's problem space into a product.</h2>
-    <p class="sec-lead">Cellix.ai is an early-stage AI payment intelligence platform in production — dispute automation, fraud prevention, and processor optimization across 27+ integrations. Designed, built, and shipped as a solo founder. It's a living proof of concept for the same developer-facing tools Stripe's Payments Intelligence team builds.</p>
-
-    <div class="cellix-grid">
-      <div class="cellix-card">
-        <div class="cellix-ey"><span class="ld"></span>Live production · cellix.ai</div>
-        <h2 class="cellix-h">AI-Powered Dispute Automation &amp; Payment Intelligence</h2>
-        <p class="cellix-p">Automates dispute investigations end-to-end — compiling evidence to Visa CE3.0 and Mastercard specs, submitting via processor APIs, and running fraud prevention across the stack. Designed, built, and shipped solo from architecture to production. Stripe integration is live.</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;position:relative;z-index:1">
-          <a class="cellix-lnk" href="/cellix">See the full story →</a>
-          <a class="cellix-lnk" href="https://www.cellix.ai" target="_blank">www.cellix.ai ↗</a>
-        </div>
-        <div class="tag-cloud">
-          <span class="ptag">Stripe</span><span class="ptag">Adyen</span><span class="ptag">PayPal</span>
-          <span class="ptag">Checkout.com</span><span class="ptag">Braintree</span>
-          <span class="ptag">Visa CE3.0</span><span class="ptag">Mastercard</span>
-          <span class="ptag">ML Fraud Models</span><span class="ptag">Real-time Predictions</span>
-          <span class="ptag">Developer APIs</span><span class="ptag">Webhooks</span><span class="ptag">PCI DSS</span>
+      <div class="tl-item">
+        <div class="tl-marker" style="--mc:#0BBF6E"></div>
+        <div class="tl-content">
+          <div class="tl-meta">
+            <span class="tl-company">Paze (Early Warning)</span>
+            <span class="tl-dates">Feb 2024 – Feb 2025</span>
+            <span class="tl-title">Sr. Fraud Risk Strategist</span>
+          </div>
+          <h3>Where I built a product from zero</h3>
+          <p>Paze launched with zero fraud infrastructure — no rules, no vendor stack, no ML signals. I owned the entire buildout: evaluated and onboarded vendors, wrote technical specs, defined API integration requirements with engineering, authored 90+ signal-layered rules, and ran precision/recall tuning cycles against board-mandated auth rate targets. Reported directly to the board weekly. This was the closest thing to a 0→1 PM role I've had — I just didn't have the title.</p>
+          <div class="tl-stats">
+            <span class="tl-stat">90+ fraud rules shipped</span>
+            <span class="tl-stat">3–5pp auth rate lift</span>
+            <span class="tl-stat">0→1 from scratch</span>
+          </div>
         </div>
       </div>
-      <div class="cellix-right">
-        <div class="cst"><span class="cst-l">Processor integrations live</span><span class="cst-v vi">27+</span></div>
-        <div class="cst"><span class="cst-l">Dispute decision latency</span><span class="cst-v cy">50ms</span></div>
-        <div class="cst"><span class="cst-l">Dispute automation scope</span><span class="cst-v gr">Full lifecycle</span></div>
-        <div class="cst"><span class="cst-l">Card network specs supported</span><span class="cst-v" style="font-size:15px">Visa CE3.0 + MC</span></div>
-        <div class="cst"><span class="cst-l">Built by</span><span class="cst-v" style="font-size:13px;letter-spacing:-.01em">Solo founder · Full stack</span></div>
-        <div class="cst" style="border-color:rgba(99,91,255,.18);background:rgba(99,91,255,.03)">
-          <span class="cst-l">Live site</span>
-          <a href="https://www.cellix.ai" target="_blank" style="font-size:14px;font-weight:500;color:var(--v);text-decoration:none">www.cellix.ai ↗</a>
+
+      <div class="tl-item">
+        <div class="tl-marker" style="--mc:#635BFF"></div>
+        <div class="tl-content">
+          <div class="tl-meta">
+            <span class="tl-company">Adyen</span>
+            <span class="tl-dates">Feb 2025 – Present</span>
+            <span class="tl-title">Payments Performance Manager</span>
+          </div>
+          <h3>Where I'm doing auth optimization today</h3>
+          <p>Currently advising 50+ enterprise merchants on authorization optimization — designing controlled A/B tests against competing processors, building enablement programs for account management teams, and translating basis-point auth improvements into dollar-denominated merchant revenue. Generated $15M+ in ARR through Protect portfolio expansion. This work directly parallels what Stripe's Authorization Boost team does.</p>
+          <div class="tl-stats">
+            <span class="tl-stat">$15M+ ARR</span>
+            <span class="tl-stat">50+ merchants advised</span>
+            <span class="tl-stat">Current role</span>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- CAREER ARC -->
+<!-- CELLIX — the weekend project, framed as passion -->
 <section class="sec">
   <div class="sec-in">
-    <div class="sec-ey">Career arc</div>
-    <h2 class="sec-h2">7+ years of payments product ownership.<br>Four companies. One domain.</h2>
-    <p class="sec-lead">Every role was product ownership in practice — defining roadmaps, shipping to production, coaching cross-functional teams, and owning revenue outcomes. Each role built directly on the last.</p>
+    <div class="sec-ey">The weekend project</div>
+    <h2 class="sec-h2">I built this for fun.<br>That's kind of the point.</h2>
+    <p class="sec-lead"><a href="/cellix" style="color:var(--v);text-decoration:none;font-weight:500">Cellix.ai</a> is an AI-powered dispute automation and payment intelligence platform. I built it on nights and weekends because the problem was too interesting not to. It's live in production with 27+ processor integrations.</p>
 
-    <div class="cx-timeline">
-      <div class="cx-step">
-        <div class="cx-step-num" style="background:rgba(0,212,255,.1);color:#00D4FF">1</div>
-        <div class="cx-step-content">
-          <h4>Chime · 2019–2021 · Fraud Operations &amp; Strategy</h4>
-          <p>Launched fraud ops from pilot to 150+ investigators. Built dispute forecasting models. Defined case accuracy frameworks. <strong>Foundation:</strong> learned how fraud systems work at the operational layer — before the ML.</p>
+    <div class="cellix-showcase">
+      <div class="cellix-main">
+        <div class="cellix-why">
+          <h3>Why I built it</h3>
+          <p>After years of managing disputes manually across PayPal, seeing merchants struggle with card network compliance, and building fraud systems from scratch at Paze — I kept thinking: <em>this should be automated, and nobody's doing it well.</em> So I started building.</p>
+          <p>Cellix automates dispute investigations end-to-end — compiling evidence to Visa CE3.0 and Mastercard specs, submitting via processor APIs, and running fraud prevention across the stack. It solves a real industry pain point, and building it taught me more about payment infrastructure than any job could.</p>
         </div>
-      </div>
-      <div class="cx-step">
-        <div class="cx-step-num" style="background:rgba(232,71,95,.1);color:var(--red)">2</div>
-        <div class="cx-step-content">
-          <h4>PayPal · Oct 2021–Feb 2024 · Enterprise Risk Strategist</h4>
-          <p>Owned compliance tooling for 500+ merchants. Designed the product bundle that drove $500K+ ARR. Prevented $2M+ in card network fines. <strong>Foundation:</strong> learned card network rules and merchant-facing product at enterprise scale.</p>
+        <div class="cellix-details">
+          <h3>What it does</h3>
+          <ul>
+            <li>Automates dispute evidence compilation to card network specifications</li>
+            <li>Integrates with 27+ processors — including Stripe, Adyen, PayPal, Checkout.com, Braintree</li>
+            <li>50ms dispute decision latency</li>
+            <li>Full lifecycle dispute automation from intake to submission</li>
+            <li>ML-powered fraud signal analysis and prevention</li>
+          </ul>
         </div>
-      </div>
-      <div class="cx-step">
-        <div class="cx-step-num" style="background:rgba(11,191,110,.1);color:#0a9957">3</div>
-        <div class="cx-step-content">
-          <h4>Paze (Early Warning) · Feb 2024–Feb 2025 · Sr. Fraud Risk Strategist</h4>
-          <p>Built fraud ML stack from zero — 90+ rules, vendor roadmap, board reporting. <strong>Foundation:</strong> first 0→1 product build in payments risk. Shipped a full fraud engine to production.</p>
-        </div>
-      </div>
-      <div class="cx-step">
-        <div class="cx-step-num" style="background:rgba(99,91,255,.1);color:var(--v)">4</div>
-        <div class="cx-step-content">
-          <h4>Adyen · Feb 2025–Present · Payments Performance Manager</h4>
-          <p>Driving auth optimization strategy for enterprise merchants. $15M+ ARR. 50+ merchants advised. Architected A/B test methodology with data science team. <strong>Foundation:</strong> current role — directly parallel to Authorization Boost PM work.</p>
-        </div>
-      </div>
-      <div class="cx-step">
-        <div class="cx-step-num" style="background:rgba(99,91,255,.18);color:var(--v)">+</div>
-        <div class="cx-step-content">
-          <h4>Cellix.ai · 2025–Present · Founder</h4>
-          <p>Built a production AI payments intelligence platform — dispute automation, fraud prevention, payment monitoring across 27+ integrations. <strong>Foundation:</strong> encoded everything above into a product. MS in Data Science (4.0 GPA) applied throughout.</p>
+        <div class="cellix-links">
+          <a class="btn-p" href="/cellix">The full Cellix story →</a>
+          <a class="btn-s" href="https://www.cellix.ai" target="_blank">www.cellix.ai ↗</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VISION — forward-looking, what I'd build -->
+<!-- WHY STRIPE — genuine admiration + why me -->
 <section class="sec sec-alt">
   <div class="sec-in">
-    <div class="sec-ey">Looking forward</div>
-    <h2 class="sec-h2">What I'd explore in the first 90 days<br>on Payments Intelligence.</h2>
-    <p class="sec-lead">A long-term vision starts with deep listening. Here's how I'd approach the first quarter — spending time with developers, sales, support, and data science to understand user needs before setting direction.</p>
+    <div class="sec-ey">Why Stripe</div>
+    <h2 class="sec-h2">I work at Adyen.<br>I want to be at Stripe.</h2>
 
-    <div class="bento">
-
-      <div class="bc" style="--ct:#635BFF">
-        <div class="bc-problem">Month 1 · Listen and map</div>
-        <div class="bc-h">Deeply understand user needs by spending time with developers, sales, and support — observe patterns and trends across feedback and market data</div>
-        <div class="bc-ev">Shadow developer support tickets to understand how merchants integrate Authorization Boost and Radar. Sit with sales to learn the objections. Meet with data science to understand model performance and signal gaps. Map the gap between what developers need and what the product currently delivers.</div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-label">The view from the other side</div>
+        <p>I work at one of Stripe's biggest competitors, and every day I see why Stripe is the company everyone is chasing. Stripe doesn't just process payments — it sets the standard. Radar changed what merchants expect from fraud prevention. Authorization optimization became a core product category because Stripe made it one. The developer experience is the benchmark every other processor measures against.</p>
       </div>
 
-      <div class="bc" style="--ct:#0BBF6E">
-        <div class="bc-problem">Month 2 · Prioritize and align</div>
-        <div class="bc-h">Set pace, prioritization, and execution — collaborate cross-functionally with Engineering, Design, Data Science, Marketing, Sales, and Operations</div>
-        <div class="bc-ev">Synthesize developer feedback and market data into a prioritized opportunity map. Identify where authorization lift, fraud reduction, and payment cost savings intersect for maximum merchant value. Align cross-functional stakeholders on the highest-leverage investments.</div>
+      <div class="why-card">
+        <div class="why-card-label">I've seen the gap firsthand</div>
+        <p>At Adyen, I watch us try to close the gap Stripe created. At PayPal, I saw enterprise merchants compare everything to Stripe's tooling. When building Cellix.ai, Stripe's API was my first integration — not for market share, but because the docs were so clean it took a fraction of the time. That's what happens when a company truly treats developers as the user.</p>
       </div>
 
-      <div class="bc" style="--ct:#00D4FF">
-        <div class="bc-problem">Month 3 · Ship and learn</div>
-        <div class="bc-h">Build and launch new capabilities delivering significant customer value — with a clear execution roadmap</div>
-        <div class="bc-ev">Deliver a fast win that demonstrates the team's ability to ship. Define the long-term product vision and roadmap for the next 4 quarters. Build the measurement framework that connects ML model improvements to merchant revenue outcomes. Coach the team on best practices in defining product requirements and delivering against roadmap.</div>
+      <div class="why-card">
+        <div class="why-card-label">Why Payments Intelligence specifically</div>
+        <p>This team sits at the intersection of everything I care about: ML-driven authorization optimization, fraud signal architecture, and turning model improvements into real merchant revenue. I've spent almost 8 years on these exact problems — and I've never seen a team that approaches them with the rigor and ambition that Stripe does.</p>
       </div>
 
+      <div class="why-card">
+        <div class="why-card-label">What I'd bring</div>
+        <p>I don't have a PM title on my resume. What I have is domain fluency in the exact problem space this team owns, hands-on experience shipping payment systems, the analytical foundation (MS Data Science) to work with data science and engineering, and merchant-facing instincts from advising hundreds of enterprise accounts.</p>
+      </div>
+    </div>
+
+    <div class="why-closing">
+      <p>Stripe's posting welcomes "extraordinary career paths." Mine — from fraud ops at Chime to building an AI payment platform on weekends — is exactly that.</p>
+      <p class="why-ask"><strong>I'd love the chance to start my PM career at the company that defines how the world thinks about payments.</strong></p>
     </div>
   </div>
 </section>
@@ -552,14 +294,12 @@
         <a class="fl" href="tel:6165582155">616-558-2155</a>
         <a class="fl" href="/cellix">Cellix.ai</a>
         <a class="fl" href="/resume">Resume</a>
-        <a class="fl" href="/pm-philosophy">PM Philosophy</a>
 
       </div>
     </div>
     <div class="fdiv"></div>
     <div class="fbot">
       <div class="fcopy">Submitted for PM, Payments Intelligence · Stripe · 2026</div>
-      <div class="fcopy">Deploy: <code style="font-size:11px;background:var(--border);padding:2px 6px;border-radius:4px">vercel deploy</code></div>
     </div>
   </div>
 </footer>
