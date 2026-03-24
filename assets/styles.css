@@ -97,6 +97,7 @@ body{font-family:var(--f);color:var(--body);background:var(--white);-webkit-font
 .bring-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:28px;transition:border-color .2s}
 .bring-card:hover{border-color:var(--v-border)}
 .bring-icon{font-size:28px;margin-bottom:14px}
+.bring-label{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--v);margin-bottom:10px}
 .bring-card h3{font-size:18px;font-weight:400;color:var(--head);letter-spacing:-.01em;margin-bottom:10px}
 .bring-card p{font-size:15px;color:var(--muted);line-height:1.65}
 .bring-card a{color:var(--v);text-decoration:none;font-weight:500}
