@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1200" height="4" fill="#533AF5"/>
+
+  <!-- Name -->
+  <text x="600" y="240" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="56" font-weight="300" fill="#061B31" text-anchor="middle">Branden Beardsley</text>
+
+  <!-- Divider -->
+  <rect x="570" y="270" width="60" height="3" rx="1.5" fill="#533AF5"/>
+
+  <!-- Role -->
+  <text x="600" y="320" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="400" fill="#64788D" text-anchor="middle">Payments Performance Manager, Adyen</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="370" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="400" fill="#64788D" text-anchor="middle">Chicago, IL</text>
+
+  <!-- URL -->
+  <text x="600" y="460" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="400" fill="#533AF5" text-anchor="middle">branden.cellix.ai</text>
+</svg>
