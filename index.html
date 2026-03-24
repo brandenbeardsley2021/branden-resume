@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Branden Beardsley | Professional Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --v:#635BFF;
+  --v-dark:#4F46E5;
+  --navy:#0A2540;
+  --green:#0BBF6E;
+  --red:#E8475F;
+  --white:#FFFFFF;
+  --surface:#F6F9FC;
+  --border:#E6EBF1;
+  --border2:#C9D4E0;
+  --muted:#8898AA;
+  --body:#425466;
+  --head:#0A2540;
+  --f:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --max:1080px;
+  --g:48px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);color:var(--body);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:200;height:56px;display:flex;align-items:center;padding:0 var(--g);background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav-in{max-width:var(--max);width:100%;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;text-decoration:none}
+.nav-name{font-size:14px;font-weight:600;color:var(--head);letter-spacing:-.015em}
+.nav-div{width:1px;height:16px;background:var(--border2);margin:0 12px}
+.nav-sub{font-size:13px;color:var(--muted)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-pill{font-size:12px;font-weight:500;color:var(--v);background:rgba(99,91,255,.07);border:1px solid rgba(99,91,255,.18);padding:4px 10px;border-radius:4px}
+.nav-btn{font-size:13px;font-weight:500;color:#fff;background:var(--v);padding:7px 16px;border-radius:6px;text-decoration:none;transition:background .15s,transform .15s;white-space:nowrap}
+.nav-btn:hover{background:var(--v-dark);transform:translateY(-1px)}
+
+/* HERO — problem-first framing */
+.hero{background:var(--white);position:relative;overflow:hidden;padding:80px var(--g) 0;border-bottom:1px solid var(--border)}
+.hero::before{content:'';position:absolute;top:-160px;right:-200px;width:800px;height:800px;background:radial-gradient(ellipse at center,rgba(99,91,255,.1) 0%,rgba(99,91,255,.05) 35%,transparent 70%);pointer-events:none;border-radius:50%}
+.hero-in{position:relative;z-index:2;max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:end}
+
+.role-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:500;color:var(--muted);border:1px solid var(--border);padding:5px 12px;border-radius:100px;margin-bottom:28px}
+.role-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.3)}}
+
+/* Lead with the PROBLEM, not the person */
+.hero-h1{font-size:clamp(38px,4.8vw,64px);font-weight:600;line-height:1.1;letter-spacing:-.03em;color:var(--head);margin-bottom:20px}
+.hero-h1 .hl{color:var(--v)}
+
+/* Subhead frames the candidate as the answer, not the subject */
+.hero-sub{font-size:17px;font-weight:400;color:var(--body);line-height:1.65;max-width:520px;margin-bottom:12px;letter-spacing:-.01em}
+.hero-attribution{font-size:13px;color:var(--muted);margin-bottom:32px;letter-spacing:0}
+.hero-attribution a{color:var(--v);text-decoration:none;font-weight:500}
+.hero-attribution a:hover{text-decoration:underline}
+
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:72px}
+.btn-p{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:#fff;background:var(--v);padding:11px 22px;border-radius:6px;text-decoration:none;letter-spacing:-.01em;transition:background .15s,box-shadow .15s,transform .15s;box-shadow:0 1px 3px rgba(99,91,255,.3)}
+.btn-p:hover{background:var(--v-dark);box-shadow:0 4px 16px rgba(99,91,255,.35);transform:translateY(-1px)}
+.btn-s{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--head);background:var(--white);border:1px solid var(--border2);padding:11px 22px;border-radius:6px;text-decoration:none;letter-spacing:-.01em;transition:border-color .15s,box-shadow .15s,transform .15s}
+.btn-s:hover{border-color:#b0bfd4;box-shadow:0 2px 8px rgba(10,37,64,.08);transform:translateY(-1px)}
+
+/* Dashboard card stays — but it now shows Stripe-relevant metrics, not personal ones */
+.hero-card{background:var(--white);border:1px solid var(--border);border-radius:12px;box-shadow:0 4px 24px rgba(10,37,64,.08),0 1px 4px rgba(10,37,64,.04);overflow:hidden;margin-bottom:-1px}
+.card-chrome{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 14px;display:flex;align-items:center;gap:6px}
+.chrdot{width:8px;height:8px;border-radius:50%}
+.c-r{background:#ff5f57}.c-y{background:#febc2e}.c-g{background:#28c840}
+.card-ttl{font-size:11px;font-weight:500;color:var(--muted);margin-left:auto;letter-spacing:.02em}
+.card-body{padding:20px}
+.card-sh{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.mrow{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border)}
+.mrow:last-of-type{border-bottom:none}
+.ml{font-size:12px;color:var(--body)}
+.mr{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--head)}
+.mtag{font-size:10px;font-weight:500;padding:2px 7px;border-radius:100px}
+.tg{background:rgba(11,191,110,.1);color:#0a9957}
+.tv{background:rgba(99,91,255,.1);color:var(--v)}
+.tc{background:rgba(0,212,255,.1);color:#0099bb}
+.sparkwrap{margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
+.spark-lbl{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:8px}
+.spark{height:32px;display:flex;align-items:flex-end;gap:2px}
+.sb{flex:1;background:#E6EBF1;border-radius:2px 2px 0 0;transition:background .2s}
+.sb.hi{background:var(--v)}
+
+/* STAT STRIP */
+.stats{background:var(--white);border-bottom:1px solid var(--border);padding:0 var(--g)}
+.stats-in{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.sc{padding:26px 0 26px 32px;border-left:1px solid var(--border)}
+.sc:first-child{border-left:none;padding-left:0}
+.sc-n{font-size:28px;font-weight:600;color:var(--head);letter-spacing:-.03em;line-height:1;margin-bottom:4px}
+.sc-n em{font-style:normal;color:var(--v)}
+/* Label now frames result for STRIPE, not the candidate */
+.sc-l{font-size:12px;color:var(--muted);line-height:1.35}
+
+/* SECTION */
+.sec{padding:88px var(--g)}
+.sec-alt{background:var(--surface)}
+.sec-in{max-width:var(--max);margin:0 auto}
+.sec-ey{font-size:12px;font-weight:600;color:var(--v);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.sec-h2{font-size:clamp(26px,3vw,40px);font-weight:600;color:var(--head);letter-spacing:-.03em;line-height:1.12;margin-bottom:14px}
+.sec-lead{font-size:17px;color:var(--muted);max-width:560px;line-height:1.65;margin-bottom:52px;letter-spacing:-.01em}
+
+/* ─────────────────────────────────────
+   PROBLEM → EVIDENCE grid
+   Each card starts with a STRIPE need,
+   then shows evidence that it's solved.
+   NOT "here's what I did" — "here's the
+   problem you have and why it's solved."
+───────────────────────────────────── */
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.bc{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px;position:relative;overflow:hidden;transition:box-shadow .2s,border-color .2s,transform .2s}
+.bc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--ct,var(--v));transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.bc:hover{box-shadow:0 4px 20px rgba(10,37,64,.09);border-color:rgba(99,91,255,.2);transform:translateY(-2px)}
+.bc:hover::before{transform:scaleX(1)}
+/* Problem label in muted — the stripe need */
+.bc-problem{font-size:11px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px}
+/* The headline is the SOLUTION STATEMENT */
+.bc-h{font-size:15px;font-weight:600;color:var(--head);letter-spacing:-.02em;line-height:1.35;margin-bottom:10px}
+/* Evidence is factual, third-person, brief */
+.bc-ev{font-size:13px;color:var(--body);line-height:1.6;border-top:1px solid var(--border);padding-top:10px;margin-top:2px}
+.bc-ev strong{color:var(--head);font-weight:500}
+
+/* CASE STUDIES — reframed around Stripe's products */
+.case{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:40px;margin-bottom:20px;transition:box-shadow .2s,border-color .2s}
+.case:hover{box-shadow:0 6px 32px rgba(10,37,64,.07);border-color:rgba(99,91,255,.18)}
+.case-hd{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;gap:16px;flex-wrap:wrap}
+.co-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.co-badge{font-size:11px;font-weight:500;padding:4px 10px;border-radius:100px;border:1px solid}
+.co-date{font-size:12px;color:var(--muted)}
+.case-num{font-size:56px;font-weight:700;color:var(--border);line-height:1;letter-spacing:-.04em;flex-shrink:0;user-select:none}
+/* Case headline is STRIPE's product challenge, not "what I did" */
+.case-h{font-size:20px;font-weight:600;color:var(--head);letter-spacing:-.025em;line-height:1.3;margin-bottom:6px}
+.case-stripe-product{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:var(--v);background:rgba(99,91,255,.06);border:1px solid rgba(99,91,255,.15);padding:4px 10px;border-radius:100px;margin-bottom:14px}
+.case-ctx{font-size:14px;color:var(--body);line-height:1.65;margin-bottom:24px;max-width:680px}
+.ctbl{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:10px;overflow:hidden;margin-bottom:20px}
+.ccol{background:var(--white);padding:20px 22px}
+.cch{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:11px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.ccol ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.ccol li{font-size:13px;color:var(--body);line-height:1.45;padding-left:15px;position:relative}
+.ccol li::before{content:'→';position:absolute;left:0;color:var(--v);font-size:11px;top:1px}
+.outcomes{display:flex;gap:10px;flex-wrap:wrap;padding:16px 0;border-top:1px solid var(--border);margin-bottom:16px}
+.oc{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:11px 16px;display:flex;flex-direction:column;gap:3px;transition:border-color .2s}
+.oc:hover{border-color:rgba(99,91,255,.2)}
+.oc-n{font-size:19px;font-weight:700;letter-spacing:-.025em;line-height:1}
+.oc-l{font-size:11px;color:var(--muted);line-height:1.3}
+.callout{display:flex;gap:14px;align-items:flex-start;background:rgba(99,91,255,.04);border:1px solid rgba(99,91,255,.16);border-radius:10px;padding:16px 20px}
+.callout-ic{width:26px;height:26px;border-radius:6px;background:var(--v);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;margin-top:1px}
+.callout-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--v);margin-bottom:4px}
+.callout-txt{font-size:13.5px;color:var(--body);line-height:1.58}
+
+/* CELLIX */
+.cellix-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+.cellix-card{background:var(--navy);border-radius:16px;padding:48px;position:relative;overflow:hidden}
+.cellix-card::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(99,91,255,.35) 0%,transparent 70%);pointer-events:none}
+.cellix-card::after{content:'';position:absolute;bottom:-80px;left:40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,255,.15) 0%,transparent 70%);pointer-events:none}
+.cellix-ey{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:500;color:rgba(255,255,255,.45);margin-bottom:18px}
+.ld{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+.cellix-h{font-size:26px;font-weight:600;color:#fff;letter-spacing:-.03em;line-height:1.15;margin-bottom:12px;position:relative;z-index:1}
+/* Cellix description focuses on what it DOES for payments, not who built it */
+.cellix-p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.65;margin-bottom:22px;position:relative;z-index:1}
+.cellix-lnk{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:8px 16px;border-radius:6px;text-decoration:none;margin-bottom:22px;transition:background .15s,border-color .15s;position:relative;z-index:1}
+.cellix-lnk:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.3)}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px;position:relative;z-index:1}
+.ptag{font-size:11px;color:rgba(255,255,255,.4);border:1px solid rgba(255,255,255,.1);padding:3px 8px;border-radius:4px;transition:all .15s;cursor:default}
+.ptag:hover{color:#fff;border-color:rgba(99,91,255,.5);background:rgba(99,91,255,.12)}
+.cellix-right{display:flex;flex-direction:column;gap:12px}
+.cst{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;transition:border-color .2s,box-shadow .2s}
+.cst:hover{border-color:rgba(99,91,255,.22);box-shadow:0 2px 10px rgba(10,37,64,.06)}
+.cst-l{font-size:13px;color:var(--muted)}
+.cst-v{font-size:19px;font-weight:600;color:var(--head);letter-spacing:-.025em}
+.cst-v.vi{color:var(--v)}.cst-v.gr{color:var(--green)}.cst-v.cy{color:#0891B2}
+
+/* SKILLS */
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:32px 72px}
+.ski{padding:6px 0}
+.ski-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.ski-name{font-size:14px;font-weight:500;color:var(--head);letter-spacing:-.01em}
+.ski-src{font-size:11px;color:var(--muted)}
+.ski-track{height:3px;background:var(--border);border-radius:100px;overflow:hidden}
+.ski-fill{height:100%;border-radius:100px;background:var(--v);width:var(--w,80%);animation:fillIn 1.5s cubic-bezier(.22,1,.36,1) both;transform:scaleX(0);transform-origin:left}
+@keyframes fillIn{to{transform:scaleX(1)}}
+
+/* FOOTER */
+.footer{background:var(--surface);border-top:1px solid var(--border);padding:48px var(--g) 40px}
+.footer-in{max-width:var(--max);margin:0 auto}
+.footer-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:40px;gap:32px;flex-wrap:wrap}
+.f-name{font-size:16px;font-weight:600;color:var(--head);letter-spacing:-.015em;margin-bottom:3px}
+.f-role{font-size:13px;color:var(--muted)}
+.flinks{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.fl{font-size:13px;color:var(--muted);text-decoration:none;transition:color .15s}
+.fl:hover{color:var(--head)}
+.f-cta{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:500;color:#fff;background:var(--v);padding:8px 16px;border-radius:6px;text-decoration:none;transition:background .15s,transform .15s}
+.f-cta:hover{background:var(--v-dark);transform:translateY(-1px)}
+.fdiv{height:1px;background:var(--border);margin-bottom:22px}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.fcopy{font-size:12px;color:var(--muted)}
+
+/* ANIMS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.au{animation:fadeUp .6s ease both}
+.d1{animation-delay:.05s}.d2{animation-delay:.13s}.d3{animation-delay:.22s}
+.d4{animation-delay:.33s}.d5{animation-delay:.46s}.d6{animation-delay:.6s}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  :root{--g:24px}
+  .hero-in{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .stats-in{grid-template-columns:repeat(2,1fr)}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .ctbl{grid-template-columns:1fr}
+  .cellix-grid{grid-template-columns:1fr}
+  .skills{grid-template-columns:1fr;gap:24px}
+  .footer-top{flex-direction:column}
+  .sec{padding:64px var(--g)}
+}
+@media(max-width:600px){
+  .bento{grid-template-columns:1fr}
+  .stats-in{grid-template-columns:1fr 1fr}
+  .nav-pill{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="nav-brand" href="#">
+      <span class="nav-name">Branden Beardsley</span>
+      <span class="nav-div"></span>
+      <span class="nav-sub">Professional Resume</span>
+    </a>
+    <div class="nav-right">
+      <span class="nav-pill">PM Application · Stripe</span>
+      <a class="nav-btn" href="https://stripe.com/jobs/listing/product-manager-payments-intelligence/7303224/apply" target="_blank">Apply at Stripe →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO — opens with Stripe's problem, not the candidate -->
+<section class="hero">
+  <div class="hero-in">
+    <div class="hero-left">
+      <div class="role-tag au d1">
+        <span class="role-dot"></span>
+        Product Manager · Payments Intelligence · Stripe
+      </div>
+
+      <!-- Headline frames the ROLE'S challenge, not the person -->
+      <h1 class="hero-h1 au d2">
+        Maximizing revenue on<br>
+        <span class="hl">every transaction</span><br>
+        takes deep domain fluency.
+      </h1>
+
+      <!-- Sub answers: here's how that fluency was built -->
+      <p class="hero-sub au d3">
+        Stripe's Payments Intelligence team optimizes billions of dollars in annual payment volume — reducing fraud, lifting authorization rates, and lowering cost for merchants. That work demands a PM who has shipped these systems, not just studied them.
+      </p>
+      <p class="hero-attribution au d3">
+        Submitted by <strong>Branden Beardsley</strong> — currently Payments Performance Manager at <strong>Adyen</strong>, advising enterprise merchants on authorization optimization, risk stack performance, and global checkout strategy. Founder, <a href="https://www.cellix.ai" target="_blank">Cellix.ai</a>.
+      </p>
+
+      <div class="hero-btns au d4">
+        <a class="btn-p" href="#evidence">See the evidence ↓</a>
+        <a class="btn-s" href="https://www.cellix.ai" target="_blank">Visit Cellix.ai ↗</a>
+      </div>
+    </div>
+
+    <!-- Card frames Stripe's domain problems, not candidate achievements -->
+    <div class="hero-card au d5">
+      <div class="card-chrome">
+        <span class="chrdot c-r"></span><span class="chrdot c-y"></span><span class="chrdot c-g"></span>
+        <span class="card-ttl">Payments Intelligence · Key metrics</span>
+      </div>
+      <div class="card-body">
+        <div class="card-sh">What this role optimizes</div>
+        <div class="mrow"><span class="ml">ARR driven via auth optimization</span><span class="mr">$15M+ <span class="mtag tg">Adyen</span></span></div>
+        <div class="mrow"><span class="ml">Enterprise merchants advised</span><span class="mr">50+ <span class="mtag tv">Adyen Uplift</span></span></div>
+        <div class="mrow"><span class="ml">Authorization rate lift</span><span class="mr">+3–5pp <span class="mtag tg">direct</span></span></div>
+        <div class="mrow"><span class="ml">Fraud signal rules shipped</span><span class="mr">90+ <span class="mtag tv">Paze 0→1</span></span></div>
+        <div class="mrow"><span class="ml">Annual fines prevented</span><span class="mr">$2M+ <span class="mtag tg">PayPal</span></span></div>
+        <div class="sparkwrap">
+          <div class="spark-lbl">ARR trajectory · Adyen merchant portfolio</div>
+          <div class="spark">
+            <div class="sb" style="height:30%"></div><div class="sb" style="height:36%"></div>
+            <div class="sb" style="height:34%"></div><div class="sb" style="height:48%"></div>
+            <div class="sb" style="height:44%"></div><div class="sb" style="height:56%"></div>
+            <div class="sb" style="height:62%"></div><div class="sb" style="height:70%"></div>
+            <div class="sb hi" style="height:79%"></div><div class="sb hi" style="height:86%"></div>
+            <div class="sb hi" style="height:91%"></div><div class="sb hi" style="height:95%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT STRIP — framed as outcomes delivered for merchants, not resume bullets -->
+<div class="stats">
+  <div class="stats-in au d6">
+    <div class="sc">
+      <div class="sc-n">$15<em>M+</em></div>
+      <div class="sc-l">ARR generated through auth optimization at Adyen</div>
+    </div>
+    <div class="sc">
+      <div class="sc-n">50<em>+</em></div>
+      <div class="sc-l">Enterprise merchants advised on Adyen Uplift globally</div>
+    </div>
+    <div class="sc">
+      <div class="sc-n">90<em>+</em></div>
+      <div class="sc-l">Fraud rules shipped from zero at Paze</div>
+    </div>
+    <div class="sc">
+      <div class="sc-n">27<em>+</em></div>
+      <div class="sc-l">PSP integrations live on Cellix.ai</div>
+    </div>
+  </div>
+</div>
+
+<!-- REQUIREMENTS — framed as STRIPE NEEDS, answered with evidence -->
+<section class="sec sec-alt" id="evidence">
+  <div class="sec-in">
+    <div class="sec-ey">Role requirements</div>
+    <h2 class="sec-h2">What the role demands.<br>Where the evidence is.</h2>
+    <p class="sec-lead">Each of Stripe's stated requirements for the PM, Payments Intelligence role — with the specific work that answers it.</p>
+
+    <div class="bento">
+
+      <div class="bc" style="--ct:#635BFF">
+        <div class="bc-problem">Requirement · 8+ years PM experience</div>
+        <div class="bc-h">Full product lifecycle ownership, from 0 to board-level reporting</div>
+        <div class="bc-ev">At <strong>Adyen</strong>, owns end-to-end product strategy for enterprise merchants across risk, auth optimization, and competitive positioning — driving $15M+ ARR. At <strong>Paze</strong>, owned the full fraud product from vendor evaluation to board-level roadmap reporting.</div>
+      </div>
+
+      <div class="bc" style="--ct:#0BBF6E">
+        <div class="bc-problem">Requirement · Strong business acumen</div>
+        <div class="bc-h">Revenue impact through payments stack optimization</div>
+        <div class="bc-ev">Generated <strong>$15M+ ARR at Adyen</strong> and <strong>$500K+ ARR at PayPal</strong> by diagnosing merchant stack inefficiencies and building clear cost/benefit cases. Advised enterprise risk teams on authorization performance with measurable outcome tracking.</div>
+      </div>
+
+      <div class="bc" style="--ct:#00D4FF">
+        <div class="bc-problem">Requirement · Customer &amp; partner facing</div>
+        <div class="bc-h">C-level enterprise merchant conversations at scale</div>
+        <div class="bc-ev">Currently pitching <strong>50+ enterprise merchants on Adyen Uplift</strong> — personalizing global checkout strategies, running competitive A/B tests, and converting C-level risk leaders with data-backed switching narratives. At Paze, delivered product demos that grew the merchant portfolio from zero.</div>
+      </div>
+
+      <div class="bc" style="--ct:#E8475F">
+        <div class="bc-problem">Requirement · Operational savvy</div>
+        <div class="bc-h">Launched and scaled a 150-person fraud operations site</div>
+        <div class="bc-ev">At <strong>Adyen</strong>, designed and built a commercial enablement program that trained Account Management teams to independently configure and run competitive A/B tests — operationalizing a specialist function at scale. At <strong>Chime</strong>, launched a 150+ investigator fraud ops site from pilot, sustaining 95%+ case accuracy.</div>
+      </div>
+
+      <div class="bc" style="--ct:#635BFF">
+        <div class="bc-problem">Requirement · Analytical horsepower</div>
+        <div class="bc-h">MS in Data Science, applied to fraud ML and forecasting</div>
+        <div class="bc-ev"><strong>Master's in Data Science, 4.0 GPA</strong>, focused on Applied ML and Agentic Workflow Design. At <strong>Adyen</strong>, designed controlled A/B tests against competing processors, producing data-backed proof points that won merchant switching decisions. Built dispute forecasting models at Chime that cleared 30% of case backlog in 6 months.</div>
+      </div>
+
+      <div class="bc" style="--ct:#0BBF6E">
+        <div class="bc-problem">Requirement · Crisp communicator</div>
+        <div class="bc-h">Board-level reporting and 500-merchant compliance dashboards</div>
+        <div class="bc-ev">Presented weekly strategy and metrics <strong>directly to the board at Paze</strong>. Built compliance dashboards at PayPal monitoring 500+ merchants, preventing $2M+ in annual card network fines and improving dispute win rates 20–40%.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES — each opens with the Stripe product challenge -->
+<section class="sec" id="cases">
+  <div class="sec-in">
+    <div class="sec-ey">Case studies</div>
+    <h2 class="sec-h2">Three Stripe problems.<br>Already solved elsewhere.</h2>
+    <p class="sec-lead">Each case is framed around the challenge Stripe's Payments Intelligence team faces — with the work that demonstrates it's been done before.</p>
+
+    <div class="sec-ey">Case studies</div>
+    <h2 class="sec-h2">Three Stripe problems.<br>Already solved elsewhere.</h2>
+    <p class="sec-lead">Each case is framed around the challenge Stripe's Payments Intelligence team faces — with the work that demonstrates it's been done before.</p>
+
+    <!-- CASE 1: ADYEN — leads because it's current and most directly relevant -->
+    <div class="case">
+      <div class="case-hd">
+        <div>
+          <div class="co-row">
+            <span class="co-badge" style="color:var(--v);border-color:rgba(99,91,255,.22)">Adyen</span>
+            <span class="co-date">Feb 2025 – Present · Payments Performance Manager</span>
+          </div>
+          <div class="case-stripe-product">↔ Stripe Authorization Boost · Payments Intelligence</div>
+          <h2 class="case-h">Authorization Boost needs a PM who can translate ML signal improvements into merchant revenue — and run the experiments that prove it.</h2>
+        </div>
+        <div class="case-num">01</div>
+      </div>
+      <p class="case-ctx">Enterprise merchants with multi-processor stacks demand proof before switching. Adyen's Uplift product — like Stripe's Authorization Boost — only lands if the PM can design rigorous A/B tests against competing processors and turn the results into commercial decisions. This is the current day-to-day at Adyen.</p>
+      <div class="ctbl">
+        <div class="ccol">
+          <div class="cch">The challenge at Adyen</div>
+          <ul>
+            <li>No structured methodology to compare processors</li>
+            <li>Account teams couldn't run tests without specialist support</li>
+            <li>Competitors made unverifiable authorization claims</li>
+            <li>Product adoption stalled without third-party proof points</li>
+          </ul>
+        </div>
+        <div class="ccol">
+          <div class="cch">How it was solved</div>
+          <ul>
+            <li>Designed controlled A/B test methodology for head-to-head processor comparison</li>
+            <li>Built commercial enablement so AM teams could run tests independently</li>
+            <li>Created data-driven narratives that won merchant switching decisions</li>
+            <li>Advised 50+ enterprise merchants on global checkout optimization strategies</li>
+          </ul>
+        </div>
+        <div class="ccol">
+          <div class="cch">Why it translates to Stripe</div>
+          <ul>
+            <li>Authorization Boost faces the exact same merchant proof-point challenge</li>
+            <li>PM must bridge data science output to merchant-level revenue story</li>
+            <li>Enablement model maps directly to Stripe's Sales + PM dynamic</li>
+            <li>A/B test design is table stakes for Payments Intelligence work</li>
+          </ul>
+        </div>
+      </div>
+      <div class="outcomes">
+        <div class="oc"><span class="oc-n" style="color:var(--v)">$15M+</span><span class="oc-l">ARR generated via Protect upsell</span></div>
+        <div class="oc"><span class="oc-n" style="color:var(--head)">50+</span><span class="oc-l">Enterprise merchants advised on Uplift</span></div>
+        <div class="oc"><span class="oc-n" style="color:var(--head)">30+</span><span class="oc-l">Household-name brands on Protect</span></div>
+        <div class="oc"><span class="oc-n" style="color:#0a9957">Current</span><span class="oc-l">Role — Feb 2025 to present</span></div>
+      </div>
+      <div class="callout">
+        <div class="callout-ic">📊</div>
+        <div>
+          <div class="callout-lbl">The Stripe connection</div>
+          <div class="callout-txt">Authorization Boost's PM role requires someone who can design experiments, interpret ML signal improvements, and turn those results into merchant revenue conversations — at scale, with enterprise merchants, today. That's the current role at Adyen. The methodology, the enablement infrastructure, and the commercial outcomes are directly transferable.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE 2: PAZE -->
+    <div class="case">
+      <div class="case-hd">
+        <div>
+          <div class="co-row">
+            <span class="co-badge" style="color:#0a9957;border-color:rgba(11,191,110,.28)">Paze · Early Warning</span>
+            <span class="co-date">Feb 2024 – Feb 2025 · Sr. Fraud Risk Strategist</span>
+          </div>
+          <div class="case-stripe-product">↔ Stripe Radar · Fraud Prevention</div>
+          <h2 class="case-h">Radar needs a PM who can build a fraud ML stack from scratch and ship it — not just manage one that exists.</h2>
+        </div>
+        <div class="case-num">02</div>
+      </div>
+      <p class="case-ctx">Paze launched competing with PayPal and Apple Pay with zero fraud risk infrastructure — no rules, no vendor stack, no ML signals. The challenge was identical to what Stripe faces when standing up a new risk product: build it right, ship it fast, and prove it works in production.</p>
+      <div class="ctbl">
+        <div class="ccol">
+          <div class="cch">The challenge at Paze</div>
+          <ul>
+            <li>Zero fraud infrastructure at launch</li>
+            <li>No vendor relationships or signal stack</li>
+            <li>Board pressure to show risk metrics weekly</li>
+            <li>Auth rates uncompetitive vs incumbents</li>
+          </ul>
+        </div>
+        <div class="ccol">
+          <div class="cch">How it was solved</div>
+          <ul>
+            <li>Evaluated &amp; onboarded device intelligence, identity, and fraud signal vendors</li>
+            <li>Authored 90+ signal-layered rules in production</li>
+            <li>Ran systematic tuning cycles to reduce false positives</li>
+            <li>Owned vendor roadmap and reported results to board</li>
+          </ul>
+        </div>
+        <div class="ccol">
+          <div class="cch">Why it translates to Stripe</div>
+          <ul>
+            <li>Mirrors Radar's rule authoring and ML signal architecture</li>
+            <li>Same build-test-tune loop as Authorization Boost</li>
+            <li>Identical stakeholder trade-off: risk tolerance vs. auth rate</li>
+            <li>Demonstrates 0→1 payment product ownership</li>
+          </ul>
+        </div>
+      </div>
+      <div class="outcomes">
+        <div class="oc"><span class="oc-n" style="color:#0a9957">~15%</span><span class="oc-l">Reduction in false-positive declines</span></div>
+        <div class="oc"><span class="oc-n" style="color:var(--v)">3–5pp</span><span class="oc-l">Auth rate lift post-engine launch</span></div>
+        <div class="oc"><span class="oc-n" style="color:var(--head)">90+</span><span class="oc-l">Fraud rules authored and tuned</span></div>
+        <div class="oc"><span class="oc-n" style="color:var(--v)">0→1</span><span class="oc-l">Full stack built from zero</span></div>
+      </div>
+      <div class="callout">
+        <div class="callout-ic">⚡</div>
+        <div>
+          <div class="callout-lbl">The Stripe connection</div>
+          <div class="callout-txt">Stripe Radar's PM needs to understand fraud signal architecture, rule authoring trade-offs, and false positive tuning at a level that only comes from having shipped these systems. This work is the direct equivalent — built from scratch, tuned in production, and presented to the board.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE 3 -->
+    <div class="case">
+      <div class="case-hd">
+        <div>
+          <div class="co-row">
+            <span class="co-badge" style="color:var(--red);border-color:rgba(232,71,95,.22)">PayPal</span>
+            <span class="co-date">Oct 2021 – Feb 2024 · Enterprise Risk Strategist</span>
+          </div>
+          <div class="case-stripe-product">↔ Stripe Radar · Dispute Management</div>
+          <h2 class="case-h">Radar's dispute and compliance features need a PM who understands card network rules at the merchant operations level.</h2>
+        </div>
+        <div class="case-num">03</div>
+      </div>
+      <p class="case-ctx">Card network compliance programs expose merchants to millions in annual fines when dispute rates cross thresholds. Radar's dispute management and Visa CE3.0 features sit in exactly this problem space — and managing 500+ enterprise merchants through it requires operational depth that's rare.</p>
+      <div class="ctbl">
+        <div class="ccol">
+          <div class="cch">The challenge at PayPal</div>
+          <ul>
+            <li>500+ merchants in Visa/MC compliance risk programs</li>
+            <li>No centralized alerting — issues surfaced reactively</li>
+            <li>Dispute win rates below industry benchmarks</li>
+            <li>Risk tooling adoption low among enterprise accounts</li>
+          </ul>
+        </div>
+        <div class="ccol">
+          <div class="cch">How it was solved</div>
+          <ul>
+            <li>Built dashboards and threshold alerting for 500+ merchants</li>
+            <li>Analyzed transaction and chargeback data to surface pain points</li>
+            <li>Translated data findings into fraud tooling recommendations</li>
+            <li>Grew $500K+ ARR by packaging risk tools around merchant outcomes</li>
+          </ul>
+        </div>
+        <div class="ccol">
+          <div class="cch">Why it translates to Stripe</div>
+          <ul>
+            <li>Radar's dispute management serves the same compliance challenge</li>
+            <li>Identical workflow: data analysis → product recommendation → merchant ROI</li>
+            <li>Card network rule depth (Visa CE3.0, TC40s) is directly applicable</li>
+            <li>Cellix.ai was built on this experience — now serving 27+ processors</li>
+          </ul>
+        </div>
+      </div>
+      <div class="outcomes">
+        <div class="oc"><span class="oc-n" style="color:var(--red)">$2M+</span><span class="oc-l">Annual card network fines prevented</span></div>
+        <div class="oc"><span class="oc-n" style="color:#0a9957">20–40%</span><span class="oc-l">Improvement in dispute win rates</span></div>
+        <div class="oc"><span class="oc-n" style="color:var(--v)">$500K+</span><span class="oc-l">New ARR from risk tooling upsell</span></div>
+        <div class="oc"><span class="oc-n" style="color:var(--head)">500+</span><span class="oc-l">Enterprise merchants managed</span></div>
+      </div>
+      <div class="callout">
+        <div class="callout-ic">🛡</div>
+        <div>
+          <div class="callout-lbl">The Stripe connection</div>
+          <div class="callout-txt">Radar's dispute management and Visa CE3.0 features require a PM who has operated in this exact problem space — not just read the spec. Managing 500 merchants through compliance programs, building the tooling that prevented $2M in fines, and then encoding that knowledge into Cellix.ai is the credential.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CELLIX — framed around what it DOES for payments, not who built it -->
+<section class="sec sec-alt">
+  <div class="sec-in">
+    <div class="sec-ey">Proof of concept</div>
+    <h2 class="sec-h2">The product Stripe's team<br>would recognize immediately.</h2>
+    <p class="sec-lead">Cellix.ai is a live, production AI payment intelligence platform — dispute automation, fraud prevention, and processor optimization across 27+ integrations. It's what happens when a Payments Intelligence PM builds their own version of the problem.</p>
+
+    <div class="cellix-grid">
+      <div class="cellix-card">
+        <div class="cellix-ey"><span class="ld"></span>Live production · cellix.ai</div>
+        <h2 class="cellix-h">AI-Powered Dispute Automation &amp; Payment Intelligence</h2>
+        <p class="cellix-p">Automates dispute investigations end-to-end — compiling evidence to Visa CE3.0 and Mastercard specs, submitting via processor APIs, and running fraud prevention across the stack. Built using Claude Code and Anthropic APIs. Stripe integration is live.</p>
+        <a class="cellix-lnk" href="https://www.cellix.ai" target="_blank">www.cellix.ai ↗</a>
+        <div class="tag-cloud">
+          <span class="ptag">Stripe</span><span class="ptag">Adyen</span><span class="ptag">PayPal</span>
+          <span class="ptag">Checkout.com</span><span class="ptag">Braintree</span>
+          <span class="ptag">Visa CE3.0</span><span class="ptag">Mastercard</span>
+          <span class="ptag">ML Fraud Models</span><span class="ptag">Agentic AI</span>
+          <span class="ptag">REST APIs</span><span class="ptag">Webhooks</span><span class="ptag">PCI DSS</span>
+        </div>
+      </div>
+      <div class="cellix-right">
+        <div class="cst"><span class="cst-l">Processor integrations live</span><span class="cst-v vi">27+</span></div>
+        <div class="cst"><span class="cst-l">Dispute decision latency</span><span class="cst-v cy">50ms</span></div>
+        <div class="cst"><span class="cst-l">Dispute automation scope</span><span class="cst-v gr">Full lifecycle</span></div>
+        <div class="cst"><span class="cst-l">Card network specs supported</span><span class="cst-v" style="font-size:15px">Visa CE3.0 + MC</span></div>
+        <div class="cst"><span class="cst-l">Infrastructure</span><span class="cst-v" style="font-size:13px;letter-spacing:-.01em">Claude Code · Anthropic APIs</span></div>
+        <div class="cst" style="border-color:rgba(99,91,255,.18);background:rgba(99,91,255,.03)">
+          <span class="cst-l">Live site</span>
+          <a href="https://www.cellix.ai" target="_blank" style="font-size:14px;font-weight:500;color:var(--v);text-decoration:none">www.cellix.ai ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS — framed as capabilities the role requires -->
+<section class="sec">
+  <div class="sec-in">
+    <div class="sec-ey">Capability map</div>
+    <h2 class="sec-h2">What the Payments Intelligence<br>PM role requires — and where it's been built.</h2>
+    <p class="sec-lead">Each competency Stripe's job description calls for, mapped to the direct experience that covers it.</p>
+    <div class="skills">
+      <div class="ski">
+        <div class="ski-top"><span class="ski-name">Authorization Rate Optimization</span><span class="ski-src">Adyen (current) · Paze</span></div>
+        <div class="ski-track"><div class="ski-fill" style="--w:97%"></div></div>
+      </div>
+      <div class="ski">
+        <div class="ski-top"><span class="ski-name">Enterprise Merchant Strategy</span><span class="ski-src">Adyen ($15M ARR) · PayPal</span></div>
+        <div class="ski-track"><div class="ski-fill" style="--w:96%;animation-delay:.08s"></div></div>
+      </div>
+      <div class="ski">
+        <div class="ski-top"><span class="ski-name">Fraud ML &amp; Signal Architecture</span><span class="ski-src">Adyen · Paze (0→1) · Cellix.ai</span></div>
+        <div class="ski-track"><div class="ski-fill" style="--w:94%;animation-delay:.14s"></div></div>
+      </div>
+      <div class="ski">
+        <div class="ski-top"><span class="ski-name">Payment Product Ownership</span><span class="ski-src">Adyen · Paze · Cellix.ai</span></div>
+        <div class="ski-track"><div class="ski-fill" style="--w:92%;animation-delay:.2s"></div></div>
+      </div>
+      <div class="ski">
+        <div class="ski-top"><span class="ski-name">Applied ML &amp; Data Science</span><span class="ski-src">Adyen A/B testing · MS Data Science 4.0</span></div>
+        <div class="ski-track"><div class="ski-fill" style="--w:89%;animation-delay:.26s"></div></div>
+      </div>
+      <div class="ski">
+        <div class="ski-top"><span class="ski-name">Cross-functional Execution</span><span class="ski-src">Adyen AM enablement · Paze board reporting</span></div>
+        <div class="ski-track"><div class="ski-fill" style="--w:91%;animation-delay:.32s"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-in">
+    <div class="footer-top">
+      <div>
+        <div class="f-name">Branden J. Beardsley</div>
+        <div class="f-role">Payments Performance Manager, Adyen · Founder, Cellix.ai · Chicago, IL</div>
+      </div>
+      <div class="flinks">
+        <a class="fl" href="mailto:branden.beardsley@gmail.com">branden.beardsley@gmail.com</a>
+        <a class="fl" href="tel:6165582155">616-558-2155</a>
+        <a class="fl" href="https://www.cellix.ai" target="_blank">cellix.ai ↗</a>
+        <a class="f-cta" href="https://stripe.com/jobs/listing/product-manager-payments-intelligence/7303224/apply" target="_blank">Apply at Stripe →</a>
+      </div>
+    </div>
+    <div class="fdiv"></div>
+    <div class="fbot">
+      <div class="fcopy">Submitted for PM, Payments Intelligence · Stripe · 2026</div>
+      <div class="fcopy">Deploy: <code style="font-size:11px;background:var(--border);padding:2px 6px;border-radius:4px">vercel deploy</code></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
