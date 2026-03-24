@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Resume | Branden Beardsley</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="nav-brand" href="/">
+      <span class="nav-name">Branden Beardsley</span>
+      <span class="nav-div"></span>
+      <span class="nav-sub">Payments PM</span>
+    </a>
+    <ul class="nav-links">
+      <li><a class="nav-link" href="/">Home</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-link active" href="/resume">Resume <span class="nav-caret">&#9662;</span></a>
+        <div class="nav-dropdown-menu">
+          <a class="nav-dropdown-item" href="/resume"><span class="nav-dropdown-icon">&#128196;</span> View Resume</a>
+          <a class="nav-dropdown-item" href="/assets/resume.pdf" download><span class="nav-dropdown-icon">&#11015;</span> Download PDF</a>
+        </div>
+      </li>
+      <li><a class="nav-link" href="/cellix">Cellix.AI</a></li>
+      <li><a class="nav-link" href="/pm-philosophy">PM Philosophy</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="nav-pill">PM Application · Stripe</span>
+    </div>
+    <button class="nav-hamburger" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+
+<!-- RESUME HEADER -->
+<div class="resume-hero">
+  <div class="resume-hero-in">
+    <div>
+      <h1 class="resume-title">Resume</h1>
+      <p class="resume-sub">Branden Beardsley — Payments Performance Manager, Adyen · Founder, Cellix.ai</p>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn-p" href="/assets/resume.pdf" download>Download PDF ↓</a>
+      <a class="btn-s" href="/">Back to application →</a>
+    </div>
+  </div>
+</div>
+
+<!-- PDF VIEWER -->
+<div class="resume-viewer">
+  <iframe class="resume-iframe" src="/assets/resume.pdf" title="Branden Beardsley Resume"></iframe>
+  <div class="resume-fallback">
+    <p>PDF viewer is not available on this device. <a href="/assets/resume.pdf" download>Download the PDF directly</a> to view the full resume.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-in">
+    <div class="footer-top">
+      <div>
+        <div class="f-name">Branden J. Beardsley</div>
+        <div class="f-role">Payments Performance Manager, Adyen · Founder, Cellix.ai · Chicago, IL</div>
+      </div>
+      <div class="flinks">
+        <a class="fl" href="mailto:branden.beardsley@gmail.com">branden.beardsley@gmail.com</a>
+        <a class="fl" href="tel:6165582155">616-558-2155</a>
+        <a class="fl" href="/cellix">Cellix.ai</a>
+        <a class="fl" href="/pm-philosophy">PM Philosophy</a>
+
+      </div>
+    </div>
+    <div class="fdiv"></div>
+    <div class="fbot">
+      <div class="fcopy">Submitted for PM, Payments Intelligence · Stripe · 2026</div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>

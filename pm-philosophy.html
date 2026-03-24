@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PM Philosophy | Branden Beardsley</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="nav-brand" href="/">
+      <span class="nav-name">Branden Beardsley</span>
+      <span class="nav-div"></span>
+      <span class="nav-sub">Payments PM</span>
+    </a>
+    <ul class="nav-links">
+      <li><a class="nav-link" href="/">Home</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-link" href="/resume">Resume <span class="nav-caret">&#9662;</span></a>
+        <div class="nav-dropdown-menu">
+          <a class="nav-dropdown-item" href="/resume"><span class="nav-dropdown-icon">&#128196;</span> View Resume</a>
+          <a class="nav-dropdown-item" href="/assets/resume.pdf" download><span class="nav-dropdown-icon">&#11015;</span> Download PDF</a>
+        </div>
+      </li>
+      <li><a class="nav-link" href="/cellix">Cellix.AI</a></li>
+      <li><a class="nav-link active" href="/pm-philosophy">PM Philosophy</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="nav-pill">PM Application · Stripe</span>
+    </div>
+    <button class="nav-hamburger" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="pm-hero">
+  <div class="pm-hero-in au">
+    <div class="cx-badge d1">
+      <span class="ld"></span>
+      Product management · Payments Intelligence
+    </div>
+    <h1 class="pm-h1 d2">The PM Philosophy</h1>
+    <p class="pm-sub d3">How great payments PMs think about product — and how these principles shaped every decision behind Cellix.ai.</p>
+  </div>
+</section>
+
+<!-- HOW PMs WORK AT STRIPE -->
+<section class="sec">
+  <div class="sec-in">
+    <div class="sec-ey">The Stripe PM model</div>
+    <h2 class="sec-h2">What makes Stripe PMs different.</h2>
+    <p class="sec-lead">Stripe's PM culture is distinct — and the Payments Intelligence team demands an even sharper version of it.</p>
+
+    <div class="pm-block">
+      <p><strong>Technical depth is non-negotiable.</strong> Stripe PMs are expected to understand the systems they manage at a level where they can meaningfully challenge engineering decisions — not just translate requirements. On the Payments Intelligence team, that means understanding ML model architecture, fraud signal trade-offs, and authorization optimization at the API level.</p>
+
+      <p><strong>Writing is the primary medium of decision-making.</strong> Stripe is famously a writing-first culture. Product decisions start with documents, not decks. A Payments Intelligence PM needs to write specifications that engineers, data scientists, and sales teams can all act on independently — bridging the gap between statistical rigor and merchant-facing value propositions.</p>
+
+      <p><strong>User obsession means merchant obsession.</strong> At Stripe, the user is the developer and the merchant. The Payments Intelligence PM sits at the intersection — understanding how Radar's API surface affects developer experience while simultaneously understanding how authorization rate improvements translate to merchant revenue. Both perspectives must inform every decision.</p>
+
+      <p><strong>Data-driven means hypothesis-first.</strong> Stripe PMs don't just look at dashboards — they form hypotheses, design experiments, measure outcomes, and iterate. On the Payments Intelligence team, this means designing A/B tests for authorization optimization, measuring false positive rates for fraud rules, and quantifying the revenue impact of every model improvement.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section class="sec sec-alt">
+  <div class="sec-in">
+    <div class="sec-ey">Core principles</div>
+    <h2 class="sec-h2">Six principles of an effective<br>Payments Intelligence PM.</h2>
+    <p class="sec-lead">These principles guide how to think about product in the payments intelligence domain — from problem framing to shipping decisions.</p>
+
+    <div class="grid-3">
+      <div class="principle">
+        <div class="principle-num">Principle 01</div>
+        <h3>Start with the merchant's pain point</h3>
+        <p>Every product decision begins with a merchant problem — not a feature idea. Authorization rates dropping? Dispute volumes spiking? Compliance deadlines approaching? The PM's job is to diagnose the root cause and work backward to the product solution.</p>
+      </div>
+
+      <div class="principle">
+        <div class="principle-num">Principle 02</div>
+        <h3>Own the data end-to-end</h3>
+        <p>A payments PM who can't query their own data, interpret model outputs, and challenge statistical assumptions is operating blind. Ownership means understanding the data pipeline from raw transaction to ML feature to merchant-facing metric.</p>
+      </div>
+
+      <div class="principle">
+        <div class="principle-num">Principle 03</div>
+        <h3>Ship and measure, don't spec and wait</h3>
+        <p>The best payments products are built iteratively — ship a rule, measure its false positive rate, tune it, ship again. Waiting for perfect specifications means merchants absorb fraud losses while the team debates thresholds.</p>
+      </div>
+
+      <div class="principle">
+        <div class="principle-num">Principle 04</div>
+        <h3>Bridge technical depth with commercial impact</h3>
+        <p>An ML model improvement means nothing until it's translated into merchant revenue. The PM's unique job is to connect a 0.3% lift in authorization rates to a $2M annual impact for an enterprise merchant — and make that case to the sales team.</p>
+      </div>
+
+      <div class="principle">
+        <div class="principle-num">Principle 05</div>
+        <h3>Build for global complexity</h3>
+        <p>Payment optimization that works in the US may fail in Europe, APAC, or LATAM. Card network rules differ by region, issuer behavior varies by country, and fraud patterns shift by market. The PM must design products that handle this complexity without exposing it to the merchant.</p>
+      </div>
+
+      <div class="principle">
+        <div class="principle-num">Principle 06</div>
+        <h3>Communicate in outcomes, not features</h3>
+        <p>Merchants don't buy fraud rules — they buy lower chargeback rates. They don't buy ML models — they buy higher authorization rates. Every product narrative, every roadmap item, and every stakeholder update must be framed in the language of merchant outcomes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW I APPLIED THESE TO CELLIX -->
+<section class="sec">
+  <div class="sec-in">
+    <div class="sec-ey">Applied to Cellix.ai</div>
+    <h2 class="sec-h2">How these principles shaped<br>every Cellix.ai decision.</h2>
+    <p class="sec-lead">Building Cellix.ai was the ultimate test of these principles — applied to a production payments product with real merchants, real processors, and real outcomes.</p>
+
+    <div class="grid-2">
+      <div class="applied-card">
+        <div class="applied-principle">Principle 01 → Merchant pain</div>
+        <h4>Built dispute automation because merchants lose millions to poorly handled chargebacks</h4>
+        <p>The product wasn't conceived as a feature list — it started with the pain point observed at PayPal: enterprise merchants losing disputes they should win because evidence was assembled manually, inconsistently, and too slowly. Cellix automates evidence compilation to Visa CE3.0 and Mastercard specs because that's where the money is lost.</p>
+      </div>
+
+      <div class="applied-card">
+        <div class="applied-principle">Principle 02 → Own the data</div>
+        <h4>Wrote a 14-page spec covering every processor's API surface</h4>
+        <p>Before writing a line of code, the specification documented every processor's dispute API — field mappings, evidence requirements, submission formats, and response schemas across Stripe, Adyen, Checkout.com, Braintree, Square, PayPal, and Shopify Payments. Owning the data meant understanding 7 different API surfaces at the field level.</p>
+      </div>
+
+      <div class="applied-card">
+        <div class="applied-principle">Principle 03 → Ship and measure</div>
+        <h4>Shipped to production, then iterated on real outcomes</h4>
+        <p>Rather than perfecting specs, the first version shipped with a single processor integration and basic evidence assembly. Each iteration added processors, refined the ML scoring model against actual dispute outcomes, and tightened response latency. The product improved because it was live — not because the spec was perfect.</p>
+      </div>
+
+      <div class="applied-card">
+        <div class="applied-principle">Principle 04 → Technical to commercial</div>
+        <h4>ML scoring engine translated into merchant revenue recovery</h4>
+        <p>The intelligence engine scores disputes across 40+ signals — but the merchant doesn't see signals. They see a win probability score and a recommendation: FIGHT, ACCEPT, or PREVENT. The technical depth is hidden; the commercial outcome is visible.</p>
+      </div>
+
+      <div class="applied-card">
+        <div class="applied-principle">Principle 05 → Global complexity</div>
+        <h4>27+ integrations across processors, carriers, and commerce tools</h4>
+        <p>Different processors handle disputes differently. Different carriers provide tracking data in different formats. Different CRMs store customer history differently. Cellix normalizes all of it into a single evidence pipeline — handling the complexity so the merchant doesn't have to.</p>
+      </div>
+
+      <div class="applied-card">
+        <div class="applied-principle">Principle 06 → Outcomes, not features</div>
+        <h4>Positioned around revenue recovery, not technical capabilities</h4>
+        <p>The product narrative isn't "AI-powered dispute management with ML scoring." It's "recover lost revenue." Every feature — evidence automation, win probability scoring, outcome learning — is framed in terms of the merchant outcome it delivers, not the technology behind it. The homepage doesn't mention the ML architecture until the third scroll.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;padding-top:56px">
+      <a class="btn-p" href="/cellix">Explore Cellix.ai →</a>
+      <div style="margin-top:12px">
+        <a href="/#evidence" style="font-size:13px;color:var(--muted);text-decoration:none">← See the evidence</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-in">
+    <div class="footer-top">
+      <div>
+        <div class="f-name">Branden J. Beardsley</div>
+        <div class="f-role">Payments Performance Manager, Adyen · Founder, Cellix.ai · Chicago, IL</div>
+      </div>
+      <div class="flinks">
+        <a class="fl" href="mailto:branden.beardsley@gmail.com">branden.beardsley@gmail.com</a>
+        <a class="fl" href="tel:6165582155">616-558-2155</a>
+        <a class="fl" href="/cellix">Cellix.ai</a>
+        <a class="fl" href="/resume">Resume</a>
+
+      </div>
+    </div>
+    <div class="fdiv"></div>
+    <div class="fbot">
+      <div class="fcopy">Submitted for PM, Payments Intelligence · Stripe · 2026</div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>

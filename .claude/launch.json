@@ -2,11 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "resume-site",
+      "name": "dev",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "."],
-      "port": 3000,
-      "autoPort": true
+      "runtimeArgs": ["serve", "-l", "3456", "--no-clipboard"],
+      "port": 3456
     }
   ]
 }
